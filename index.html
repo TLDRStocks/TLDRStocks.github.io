@@ -7,7 +7,10 @@
 
 	<body>
 		Working...
-		  // Initialize Firebase
+	<h1 id="bigOne"></h1> 
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
   var config = {
     apiKey: "AIzaSyAP-eq94wkBbSREbMoQzw3W0J2YPUZyPM8",
     authDomain: "tldr-ddc47.firebaseapp.com",
@@ -20,5 +23,7 @@
   var bigOne = document.getElementById("bigOne");
   var dbRef = firebase.database().ref().child('text');
   dbRef.on('value', snap => bigOne.innerText = snap.val());
+
+</script>
 	</body>
 </html>
